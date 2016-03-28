@@ -1,17 +1,23 @@
 package testing;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CustomerService {
 
-    private List<Customer> customers = new ArrayList<>();
+    private CustomerRepository repo;
 
-    public void saveCustomer(Customer customer) {
-        customers.add(customer);
+    public String saveCustomer(Customer customer) {
+        return repo.save(customer);
+    }
+
+    public Customer loadCustomer(String id) {
+        return repo.load(id);
     }
 
     public int getCustomerCount() {
-        return customers.size();
+        return repo.size();
+    }
+
+
+    public void setRepo(CustomerRepository repo) {
+        this.repo = repo;
     }
 }
