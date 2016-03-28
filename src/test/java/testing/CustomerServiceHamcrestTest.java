@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class CustomerServiceHamcrestTest {
 
-    private CustomerService service = new CustomerService();
+    private final CustomerService service = new CustomerService();
 
     @Before
     public void setUp() {

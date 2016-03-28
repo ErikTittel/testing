@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class CustomerRepository {
+class CustomerRepository {
 
-    private Map<String, Customer> store = new HashMap<>();
+    private final Map<String, Customer> store = new HashMap<>();
 
     public String save(Customer customer) {
         customer.setId(UUID.randomUUID().toString());

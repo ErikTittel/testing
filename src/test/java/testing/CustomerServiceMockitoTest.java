@@ -35,8 +35,8 @@ public class CustomerServiceMockitoTest {
         Customer customer = new Customer();
         when(repo.load("1")).thenReturn(customer);
 
-        Customer loadedcustomer = service.loadCustomer("1");
+        Customer loadedCustomer = service.loadCustomer("1");
 
-        assertThat(loadedcustomer, sameInstance(customer));
+        assertThat(loadedCustomer, sameInstance(customer));
     }
 }
